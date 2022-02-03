@@ -5,13 +5,18 @@ public class Dame extends Humain{
     private boolean isCaptive = false;
 
     public Dame(String nom, String couleur) {
-        super(nom);
+        super(nom, "lait");
         this.couleurRobe = couleur;
     }
 
     @Override
     public String quelEstTonNom() {
-        return "Miss " + this.nom;
+        return "Miss " + super.quelEstTonNom();
+    }
+
+    public void sePresenter() {
+        super.sePresenter();
+        this.changerRobe(this.couleurRobe);
     }
 
     public boolean isCaptive() {

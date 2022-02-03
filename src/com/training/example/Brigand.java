@@ -7,13 +7,19 @@ public class Brigand extends Humain {
     private boolean isEnPrison = false;
 
     public Brigand(String nom, String look) {
-        super(nom);
+        super(nom, "tord-boyaux");
         this.look = look;
     }
 
     @Override
     public String quelEstTonNom() {
-        return this.nom + " le " + this.look;
+        return super.quelEstTonNom() + " le " + this.look;
+    }
+
+    public void sePresenter() {
+        super.sePresenter();
+        this.parler("J’ai l’air " + this.look + " et j’ai déjà kidnappé " + this.nbDames + " dames !");
+        this.parler("Ma tête est mise à prix à " + this.getPrime() + "$ !");
     }
 
     public int getPrime() {

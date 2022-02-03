@@ -5,8 +5,14 @@ public class Cowboy extends Humain{
     private String adjectif = "vaillant";
 
     public Cowboy(String nom, String adjectif) {
-        super(nom);
+        super(nom, "whisky");
         this.adjectif = adjectif;
+    }
+
+    public void sePresenter() {
+        super.sePresenter();
+        this.parler("Les gens me trouvent " + this.adjectif);
+        this.parler("Ma popularité en ce moment tourne autour de " + this.popularite);
     }
 
     public void setPopularite(int popularite) {

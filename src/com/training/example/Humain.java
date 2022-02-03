@@ -1,11 +1,12 @@
 package com.training.example;
 
 public class Humain {
-    protected String nom;
-    protected String boisson = "eau";
+    private String nom;
+    private String boisson = "eau";
 
-    public Humain(String nom) {
+    public Humain(String nom, String boisson) {
         this.nom = nom;
+        this.boisson = boisson;
     }
 
     protected String quelEstTonNom() {
@@ -17,7 +18,7 @@ public class Humain {
     }
 
     protected void sePresenter() {
-        System.out.println("Bonjour. " + this.quelEstTonNom() + ". " + this.getBoisson() + ".");
+        this.parler("Bonjour, je suis " + this.quelEstTonNom() + " et j'aime le " + this.getBoisson() + ".");
     }
 
     protected void parler(String texte) {
@@ -25,7 +26,6 @@ public class Humain {
     }
 
     protected void boire() {
-        String texte = "Ah ! un bon verre de " + this.getBoisson() + " ! GLOUPS !";
-        this.parler(texte);
+        this.parler("Ah ! un bon verre de " + this.getBoisson() + " ! GLOUPS !");
     }
 }
