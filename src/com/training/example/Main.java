@@ -9,6 +9,7 @@ public class Main {
         Barman barman = new Barman("joe", "bidule");
         Sheriff sheriff = new Sheriff("Morgan", "belliqueux");
         Ripoux ripoux = new Ripoux("Jeff", "agile");
+        FemmeBrigand femmeBrigand = new FemmeBrigand("Jane", "noir");
 
         sheriff.sePresenter();
         barman.sePresenter();
@@ -16,6 +17,7 @@ public class Main {
         cowboy.sePresenter();
         brigand.sePresenter();
         ripoux.sePresenter();
+        femmeBrigand.sePresenter();
         dame.changerRobe("rose");
         dame.boire();
         brigand.capturer(dame);
