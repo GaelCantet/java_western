@@ -3,6 +3,8 @@ package com.training.example;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Humain humain = new Humain("John");
+        humain.sePresenter();
+        humain.boire();
     }
 }

@@ -6,24 +6,27 @@ public class Brigand extends Humain {
     private int prime = 100;
     private boolean isEnPrison = false;
 
-    public Brigand(String nom) {
+    public Brigand(String nom, String look) {
         super(nom);
+        this.look = look;
     }
 
     public int getPrime() {
         return this.prime;
     }
 
+    public void setPrime(int prime) {
+        this.prime = prime;
+    }
+
     public void capturer(Dame dame) {
         dame.seFaireKidnapper();
         this.nbDames++;
-        String texte = "Ah ah ! " + dame.quelEstTonNom() +", tu es mienne désormais";
-        this.parler(texte);
+        this.parler("Ah ah ! " + dame.quelEstTonNom() +", tu es mienne désormais");
     }
 
-    public void seFaireEmprisonner() {
+    public void seFaireEmprisonner(Cowboy cowboy) {
         this.isEnPrison = true;
-        String texte = "Damned, je suis fait ! (Nom du cowboy), tu m’as eu !";
-        this.parler(texte);
+        this.parler("Damned, je suis fait ! " + cowboy.quelEstTonNom() + ", tu m’as eu !");
     }
 }

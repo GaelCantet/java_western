@@ -9,20 +9,27 @@ public class Dame extends Humain{
         this.couleurRobe = couleur;
     }
 
+    public boolean isCaptive() {
+        return this.isCaptive;
+    }
+
+    public String getCouleurRobe() {
+        return this.couleurRobe;
+    }
+
     public void seFaireKidnapper() {
         this.isCaptive = true;
         this.parler("AAAAAAH !");
     }
 
-    public void seFaireLiberer() {
+    public void seFaireLiberer(Cowboy cowboy) {
         this.isCaptive = false;
-        this.parler("Merci !");
+        this.parler("Merci " + cowboy.quelEstTonNom() + "!");
     }
 
     public void changerRobe(String couleur) {
         this.couleurRobe = couleur;
-        String texte = "Regardez ma nouvelle robe " + this.couleurRobe + " !";
-        this.parler(texte);
+        this.parler("Regardez ma nouvelle robe " + this.couleurRobe + " !");
     }
 
 
