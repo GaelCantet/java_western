@@ -1,8 +1,8 @@
 package com.training.example;
 
 public class Humain {
-    private String nom;
-    private String boisson = "eau";
+    protected String nom;
+    protected String boisson = "eau";
 
     public Humain(String nom) {
         this.nom = nom;

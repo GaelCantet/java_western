@@ -11,6 +11,11 @@ public class Brigand extends Humain {
         this.look = look;
     }
 
+    @Override
+    public String quelEstTonNom() {
+        return this.nom + " le " + this.look;
+    }
+
     public int getPrime() {
         return this.prime;
     }

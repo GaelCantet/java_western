@@ -9,6 +9,11 @@ public class Dame extends Humain{
         this.couleurRobe = couleur;
     }
 
+    @Override
+    public String quelEstTonNom() {
+        return "Miss " + this.nom;
+    }
+
     public boolean isCaptive() {
         return this.isCaptive;
     }
