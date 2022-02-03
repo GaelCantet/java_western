@@ -1,6 +1,6 @@
 package com.training.example;
 
-public class Brigand extends Humain {
+public class Brigand extends Humain implements HorsLaLoi {
     private String look = "méchant";
     private int nbDames = 0;
     private int prime = 100;
@@ -22,6 +22,7 @@ public class Brigand extends Humain {
         this.parler("Ma tête est mise à prix à " + this.getPrime() + "$ !");
     }
 
+    @Override
     public int getPrime() {
         return this.prime;
     }
@@ -30,12 +31,14 @@ public class Brigand extends Humain {
         this.prime = prime;
     }
 
+    @Override
     public void capturer(Dame dame) {
         dame.seFaireKidnapper();
         this.nbDames++;
         this.parler("Ah ah ! " + dame.quelEstTonNom() +", tu es mienne désormais");
     }
 
+    @Override
     public void seFaireEmprisonner(Cowboy cowboy) {
         this.isEnPrison = true;
         this.parler("Damned, je suis fait ! " + cowboy.quelEstTonNom() + ", tu m’as eu !");

@@ -17,10 +17,10 @@ public class Sheriff extends Cowboy{
         this.parler("J'ai déjà coffré " + this.nbBrigands + " bandits.");
     }
 
-    public void coffrer(Brigand brigand) {
+    public void coffrer(HorsLaLoi horsLaLoi) {
         this.nbBrigands++;
         this.parler("Au nom de la loi, je vous arrête !");
-        brigand.seFaireEmprisonner(this);
+        horsLaLoi.seFaireEmprisonner(this);
     }
 
 

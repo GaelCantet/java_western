@@ -28,7 +28,7 @@ public class Cowboy extends Humain{
         this.parler("J'adore le " + dame.getCouleurRobe());
     }
 
-    public void tirer(Brigand brigand) {
-        System.out.println("le " + this.adjectif + " " + this.quelEstTonNom() + " tire sur " + brigand.quelEstTonNom() + ". PAN !");
+    public void tirer(HorsLaLoi horsLaLoi) {
+        System.out.println("le " + this.adjectif + " " + this.quelEstTonNom() + " tire sur " + horsLaLoi.quelEstTonNom() + ". PAN !");
     }
 }
