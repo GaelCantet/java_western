@@ -25,6 +25,7 @@ public class Humain {
     }
 
     protected void boire() {
-        System.out.println("Ah ! un bon verre de " + this.getBoisson() + " ! GLOUPS !");
+        String texte = "Ah ! un bon verre de " + this.getBoisson() + " ! GLOUPS !";
+        this.parler(texte);
     }
 }

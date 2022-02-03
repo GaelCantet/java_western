@@ -11,17 +11,18 @@ public class Dame extends Humain{
 
     public void seFaireKidnapper() {
         this.isCaptive = true;
-        System.out.println("AAAAAAH !");
+        this.parler("AAAAAAH !");
     }
 
     public void seFaireLiberer() {
         this.isCaptive = false;
-        System.out.println("Merci !");
+        this.parler("Merci !");
     }
 
     public void changerRobe(String couleur) {
         this.couleurRobe = couleur;
-        System.out.println("Regardez ma nouvelle robe " + this.couleurRobe + " !");
+        String texte = "Regardez ma nouvelle robe " + this.couleurRobe + " !";
+        this.parler(texte);
     }
 
 
