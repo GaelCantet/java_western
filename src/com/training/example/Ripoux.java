@@ -3,7 +3,7 @@ package com.training.example;
 public class Ripoux extends Sheriff implements HorsLaLoi{
     private int nbDames = 0;
     private boolean isEnPrison = false;
-    private int prime = 100;
+    private int prime = 0;
 
     public Ripoux(String nom, String adjectif) {
         super(nom, adjectif);
