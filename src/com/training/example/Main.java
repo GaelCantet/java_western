@@ -10,7 +10,9 @@ public class Main {
         Sheriff sheriff = new Sheriff("Morgan", "belliqueux");
         Ripoux ripoux = new Ripoux("Jeff", "agile");
         FemmeBrigand femmeBrigand = new FemmeBrigand("Jane", "noir");
+        Indien indien = new Indien("agile", "aigle");
 
+        indien.sePresenter();
         sheriff.sePresenter();
         barman.sePresenter();
         dame.sePresenter();
@@ -28,6 +30,8 @@ public class Main {
         ripoux.capturer(dame);
         cowboy.tirer(ripoux);
         sheriff.coffrer(ripoux);
+        indien.scalper(cowboy);
+        indien.sePresenter();
         dame.sePresenter();
         cowboy.sePresenter();
         brigand.sePresenter();

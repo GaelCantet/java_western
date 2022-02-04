@@ -1,6 +1,6 @@
 package com.training.example;
 
-public class Brigand extends Humain implements HorsLaLoi {
+public class Brigand extends Humain implements HorsLaLoi, VisagePale {
     private String look = "méchant";
     private int nbDames = 0;
     private int prime = 100;
@@ -42,5 +42,9 @@ public class Brigand extends Humain implements HorsLaLoi {
     public void seFaireEmprisonner(Cowboy cowboy) {
         this.isEnPrison = true;
         this.parler("Damned, je suis fait ! " + cowboy.quelEstTonNom() + ", tu m’as eu !");
+    }
+
+    public void scalp() {
+        this.parler("Aïe ma tête !");
     }
 }

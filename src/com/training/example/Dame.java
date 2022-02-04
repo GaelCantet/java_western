@@ -1,6 +1,6 @@
 package com.training.example;
 
-public class Dame extends Humain{
+public class Dame extends Humain implements VisagePale{
     private String couleurRobe;
     private boolean isCaptive = false;
 
@@ -42,5 +42,7 @@ public class Dame extends Humain{
         this.parler("Regardez ma nouvelle robe " + this.couleurRobe + " !");
     }
 
-
+    public void scalp() {
+        this.parler("Aïe ma tête !");
+    }
 }

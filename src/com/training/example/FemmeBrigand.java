@@ -1,7 +1,6 @@
 package com.training.example;
 
 public class FemmeBrigand extends Dame implements HorsLaLoi{
-    private int nbDames = 0;
     private boolean isEnPrison = false;
     private int prime = 100;
 
@@ -16,9 +15,7 @@ public class FemmeBrigand extends Dame implements HorsLaLoi{
 
     @Override
     public void capturer(Dame dame) {
-        dame.seFaireKidnapper();
-        this.nbDames++;
-        this.parler("Ah ah ! " + dame.quelEstTonNom() +", tu es mienne désormais");
+        this.parler("Je ne kidnappe pas les dames !");
     }
 
     @Override

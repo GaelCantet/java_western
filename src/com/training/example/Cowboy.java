@@ -1,6 +1,6 @@
 package com.training.example;
 
-public class Cowboy extends Humain{
+public class Cowboy extends Humain implements VisagePale{
     private int popularite = 0;
     private String adjectif = "vaillant";
 
@@ -30,5 +30,9 @@ public class Cowboy extends Humain{
 
     public void tirer(HorsLaLoi horsLaLoi) {
         System.out.println("le " + this.adjectif + " " + this.quelEstTonNom() + " tire sur " + horsLaLoi.quelEstTonNom() + ". PAN !");
+    }
+
+    public void scalp() {
+        this.parler("Aïe ma tête !");
     }
 }
